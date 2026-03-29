@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XIN FU FRESH IMPORT-EXPORT | 公告</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Noto+Sans+Lao:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-dark: #1a3a2a;
+    --green-mid: #2d6a4f;
+    --green-light: #52b788;
+    --green-pale: #b7e4c7;
+    --gold: #d4a017;
+    --gold-light: #f0c848;
+    --cream: #f8f4ec;
+    --brown: #5c3d1e;
+    --text-dark: #1a1a1a;
+    --text-mid: #3a3a3a;
+    --bg: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-dark);
+    font-family: 'Noto Sans TC', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Decorative background pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(82,183,136,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba(45,106,79,0.08) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d6a4f' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Header */
+  .site-header {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 60%, #3a7a5a 100%);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(26,58,42,0.4);
+  }
+
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(82,183,136,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .site-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+  }
+
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 28px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-emblem {
+    width: 72px;
+    height: 72px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(212,160,23,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(212,160,23,0.2);
+  }
+
+  .header-text { flex: 1; }
+
+  .company-name-en {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+
+  .company-name-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    margin-bottom: 4px;
+  }
+
+  .company-subtitle {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  /* Language Switcher */
+  .lang-bar {
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .lang-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .lang-btn {
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.65);
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    top: 1px;
+  }
+
+  .lang-btn:hover { color: white; }
+  .lang-btn.active {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold-light);
+  }
+
+  /* Main Content */
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Notice Card */
+  .notice-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(26,58,42,0.12), 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid rgba(82,183,136,0.2);
+  }
+
+  .notice-header {
+    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5ee 100%);
+    padding: 28px 36px 24px;
+    border-bottom: 2px solid var(--green-pale);
+    position: relative;
+  }
+
+  .notice-tag {
+    display: inline-block;
+    background: var(--green-mid);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  .notice-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .notice-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  .notice-meta .dot { color: var(--green-light); }
+
+  /* Notice Body */
+  .notice-body {
+    padding: 32px 36px;
+  }
+
+  .greeting {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--green-pale);
+  }
+
+  .section {
+    margin-bottom: 28px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-num {
+    background: var(--green-mid);
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* Schedule Table */
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+
+  .schedule-table th {
+    background: var(--green-dark);
+    color: white;
+    padding: 12px 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .schedule-table td {
+    padding: 13px 16px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-mid);
+  }
+
+  .schedule-table tr:nth-child(even) td { background: #f8fcf9; }
+  .schedule-table tr:last-child td {
+    background: #eef8f2;
+    font-weight: 700;
+    color: var(--green-dark);
+    border-bottom: none;
+  }
+
+  .schedule-table td:first-child { font-weight: 600; color: var(--green-dark); }
+
+  .time-badge {
+    background: rgba(82,183,136,0.15);
+    color: var(--green-mid);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Bullet list */
+  .rule-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .rule-item {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-mid);
+  }
+
+  .rule-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .rule-item strong {
+    color: var(--green-dark);
+    font-weight: 700;
+  }
+
+  .example-box {
+    background: #fffbf0;
+    border-left: 3px solid var(--gold);
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 13px;
+    color: #5a4a00;
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  /* Footer Note */
+  .notice-footer {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+    padding: 20px 36px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .notice-footer span {
+    color: var(--gold-light);
+  }
+
+  /* Language sections */
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    padding: 24px;
+    color: #999;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Decorative leaf */
+  .leaf-deco {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 48px;
+    opacity: 0.12;
+  }
+
+  /* Error Examples Section */
+  .examples-section {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 2px dashed var(--green-pale);
+  }
+
+  .examples-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #b91c1c;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .examples-title-icon {
+    background: #b91c1c;
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .example-card {
+    border: 1.5px solid #fecaca;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(185,28,28,0.06);
+  }
+
+  .example-card-header {
+    background: #b91c1c;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 7px 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .example-card-body {
+    padding: 12px;
+  }
+
+  .punch-list {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .punch-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-family: monospace;
+    color: var(--text-dark);
+  }
+
+  .punch-row.bad { color: #b91c1c; }
+  .punch-row.warn { color: #d97706; }
+
+  .punch-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ccc;
+    flex-shrink: 0;
+  }
+
+  .punch-dot.bad { background: #b91c1c; }
+  .punch-dot.warn { background: #d97706; }
+
+  .result-badge {
+    display: inline-block;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+
+  .result-badge.warn {
+    background: #fffbeb;
+    border-color: #fcd34d;
+    color: #92400e;
+  }
+
+  .example-reason {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .header-inner { padding: 20px 16px; }
+    .notice-header, .notice-body { padding: 20px 18px; }
+    .notice-footer { padding: 16px 18px; }
+    .notice-title { font-size: 20px; }
+    .company-name-zh { font-size: 20px; }
+    .logo-emblem { width: 52px; height: 52px; font-size: 24px; }
+    .schedule-table th, .schedule-table td { padding: 10px 8px; font-size: 12px; }
+    .time-badge { font-size: 11px; }
+    .leaf-deco { display: none; }
+    .lang-btn { padding: 8px 10px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="lang-bar">
+    <div class="lang-inner">
+      <button class="lang-btn active" onclick="switchLang('zh')">🇹🇼 中文</button>
+      <button class="lang-btn" onclick="switchLang('lo')">🇱🇦 ລາວ</button>
+      <button class="lang-btn" onclick="switchLang('id')">🇮🇩 Indonesia</button>
+      <button class="lang-btn" onclick="switchLang('th')">🇹🇭 ภาษาไทย</button>
+      <button class="lang-btn" onclick="switchLang('bn')">🇧🇩 বাংলা</button>
+      <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
+    </div>
+  </div>
+  <div class="header-inner">
+    <div class="logo-emblem">🌿</div>
+    <div class="header-text">
+      <div class="company-name-en">XIN FU FRESH IMPORT-EXPORT</div>
+      <div class="company-name-zh">欣富生鮮進出口</div>
+      <div class="company-subtitle">FRESH · QUALITY · TRUST</div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- ===== CHINESE ===== -->
+  <div class="lang-section active" id="lang-zh">
+    <div class="notice-card">
+      <div class="notice-header">
+        <div class="leaf-deco">🌾</div>
+        <div class="notice-tag">📢 公告</div>
+        <h1 class="notice-title">上下工簽到制度與規範</h1>
+        <div class="notice-meta">
+          <span>📅 發佈日期</span>
+          <span class="dot">●</span>
+          <span>2026年03月31日</span>
+        </div>
+      </div>
+      <div class="notice-body">
+        <p class="greeting">各位同仁大家好：<br>為保障個人權益並確保薪資結算準確，請務必配合落實執行以下簽到制度。</p>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">一</span>每日簽到時段</div>
+          <p style="font-size:14px;color:#555;margin-bottom:12px;">每日工作需完成 <strong>4次</strong> 簽到（上午2次、下午2次），時間規定如下：</p>
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>時段</th>
+                <th>上工簽到時間</th>
+                <th>下工簽到時間</th>
+                <th>工作時數</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>☀️ 上午</td>
+                <td><span class="time-badge">05:50 ~ 06:10</span></td>
+                <td><span class="time-badge">11:30 ~ 12:00</span></td>
+                <td>5 小時</td>
+              </tr>
+              <tr>
+                <td>🌤 下午</td>
+                <td><span class="time-badge">12:50 ~ 13:10</span></td>
+                <td><span class="time-badge">15:00 之後</span></td>
+                <td>4 小時</td>
+              </tr>
+              <tr>
+                <td>📊 合計</td>
+                <td colspan="3">每日 <strong>9 小時</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">二</span>薪資結算重要提醒</div>
+          <ul class="rule-list">
+            <li class="rule-item">
+              <div class="rule-icon">★</div>
+              <div>
+                <strong>記錄完整性：</strong>每日須有完整的 4 次簽到記錄。若紀錄不完整，僅會計算「成對」的區段時數。
+                <div class="example-box">📌 範例：若僅有 06:01、11:35、17:25 三筆記錄，因下午缺少「上工簽到」，當日僅計算上午的 5 小時工時。</div>
+              </div>
+            </li>
+            <li class="rule-item">
+              <div class="rule-icon">★</div>
+              <div><strong>時數統計標準：</strong>每日總工時需滿 9 小時方以全薪計算。若未達 9 小時，將以 <strong>每 30 分鐘</strong> 為單位進行統計。</div>
+            </li>
+            <li class="rule-item">
+              <div class="rule-icon">★</div>
+              <div><strong>加班申請：</strong>若因工作需求超過正常下工時間，請於完成簽到後，務必主動告知組長加班原因。若無告知或無相關記錄，恕不計入加班薪資。</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">三</span>請假與調度</div>
+          <ul class="rule-list">
+            <li class="rule-item">
+              <div class="rule-icon">★</div>
+              <div>如需休假或請假，請務必<strong>提前告知組長</strong>，以利後續工作排班與人力調度。</div>
+            </li>
+          </ul>
+        </div>
+        <!-- CORRECT EXAMPLES -->
+        <div class="examples-section">
+          <div class="examples-title" style="color:var(--green-dark);">
+            <span class="examples-title-icon" style="background:var(--green-mid);">✓</span>
+            正確打卡範例說明
+          </div>
+          <div class="examples-grid">
+
+            <!-- 正確範例1 -->
+            <div class="example-card" style="border-color:#bbf7d0;">
+              <div class="example-card-header" style="background:var(--green-mid);">✅ 正確範例 1：標準9小時</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:58 ✓ 上午上工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓ 上午下工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:10 ✓ 下午上工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:01 ✓ 下午下工</li>
+                </ul>
+                <div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">計算時數：9h01m ✓</div>
+                <p class="example-reason">四次打卡皆在有效區間內，上下午各成功配對，<strong>時數達9小時，以全薪計算</strong>。</p>
+              </div>
+            </div>
+
+            <!-- 正確範例2 -->
+            <div class="example-card" style="border-color:#bbf7d0;">
+              <div class="example-card-header" style="background:var(--green-mid);">✅ 正確範例 2：下工後補足時數</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>06:15 ✓ 上午上工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓ 上午下工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:21 ✓ 下午上工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:21 ✓ 延後下工補時</li>
+                </ul>
+                <div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">計算時數：9h06m ✓</div>
+                <p class="example-reason">下午上工稍晚（13:21），主動延後至 17:21 下工補足時數，<strong>總時數超過9小時，視為全薪</strong>。此情況仍需告知組長。</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WARNING EXAMPLE -->
+        <div class="examples-section">
+          <div class="examples-title" style="color:#92400e;">
+            <span class="examples-title-icon" style="background:#d97706;">!</span>
+            需注意範例說明
+          </div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#fcd34d;">
+              <div class="example-card-header" style="background:#d97706;">⚠️ 注意：加班未報備，多餘時數不計算</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:55 ✓ 上午上工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:30 ✓ 上午下工</li>
+                  <li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:00 ✓ 下午上工</li>
+                  <li class="punch-row warn"><span class="punch-dot warn"></span>19:30 ⚠️ 未報備加班</li>
+                </ul>
+                <div class="result-badge warn">顯示時數：11h30m　→　實際計算：9h</div>
+                <p class="example-reason">下午延後至 19:30 才下工，總工時顯示 11h30m，但<strong>加班前未向組長報備</strong>，超出正常下工時間後的時數<strong>不列入薪資計算</strong>，僅以 9 小時計算。若有加班需求，請務必提前告知組長並留有記錄。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ERROR EXAMPLES -->
+        <div class="examples-section">
+          <div class="examples-title">
+            <span class="examples-title-icon">✕</span>
+            錯誤打卡範例說明
+          </div>
+          <div class="examples-grid">
+
+            <!-- 範例1 -->
+            <div class="example-card">
+              <div class="example-card-header">❌ 範例 1：只有 2 次打卡</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row"><span class="punch-dot bad"></span>07:01</li>
+                  <li class="punch-row"><span class="punch-dot bad"></span>20:13</li>
+                </ul>
+                <div class="result-badge">計算時數：0h</div>
+                <p class="example-reason">僅有 2 筆記錄，缺少下午的上工與下工簽到，無法形成有效配對，當日工時<strong>不予計算</strong>。</p>
+              </div>
+            </div>
+
+            <!-- 範例2 -->
+            <div class="example-card">
+              <div class="example-card-header">❌ 範例 2：只有 3 次打卡</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row"><span class="punch-dot"></span>06:01</li>
+                  <li class="punch-row"><span class="punch-dot"></span>13:10</li>
+                  <li class="punch-row bad"><span class="punch-dot bad"></span>16:55 ← 缺上工</li>
+                </ul>
+                <div class="result-badge">計算時數：8h54m</div>
+                <p class="example-reason">下午缺少「上工簽到」，16:55 無法配對，下午時數<strong>不計入</strong>，僅計算上午5小時。實際結算低於預期。</p>
+              </div>
+            </div>
+
+            <!-- 範例3 -->
+            <div class="example-card">
+              <div class="example-card-header">❌ 範例 3：5 次打卡（多一筆）</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row"><span class="punch-dot"></span>06:06</li>
+                  <li class="punch-row bad"><span class="punch-dot bad"></span>06:07 ← 重複</li>
+                  <li class="punch-row"><span class="punch-dot"></span>11:31</li>
+                  <li class="punch-row"><span class="punch-dot"></span>13:08</li>
+                  <li class="punch-row"><span class="punch-dot"></span>17:00</li>
+                </ul>
+                <div class="result-badge">計算時數：8h54m</div>
+                <p class="example-reason">共5筆，多出一筆造成配對錯誤，系統無法正確辨識上下工區段，導致時數計算異常。</p>
+              </div>
+            </div>
+
+            <!-- 範例4 -->
+            <div class="example-card">
+              <div class="example-card-header">❌ 範例 4：重複打卡＋缺下工</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row"><span class="punch-dot"></span>05:51</li>
+                  <li class="punch-row bad"><span class="punch-dot bad"></span>12:52 ← 缺上午下工</li>
+                  <li class="punch-row warn"><span class="punch-dot warn"></span>17:01</li>
+                  <li class="punch-row warn"><span class="punch-dot warn"></span>17:02 ← 重複</li>
+                </ul>
+                <div class="result-badge">計算時數：9h02m</div>
+                <p class="example-reason">上午缺少下工簽到，17:01與17:02短時間重複打卡，配對混亂，實際計算時數可能不正確。</p>
+              </div>
+            </div>
+
+            <!-- 範例5 -->
+            <div class="example-card">
+              <div class="example-card-header">⚠️ 範例 5：打卡時間異常</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row warn"><span class="punch-dot warn"></span>05:58</li>
+                  <li class="punch-row"><span class="punch-dot"></span>13:10</li>
+                  <li class="punch-row"><span class="punch-dot"></span>13:21</li>
+                  <li class="punch-row warn"><span class="punch-dot warn"></span>19:01 ← 異常</li>
+                </ul>
+                <div class="result-badge warn">計算時數：11h01m</div>
+                <p class="example-reason">19:01 超出正常下工時間，若未事先向組長申報加班，<strong>超時部分不計入薪資</strong>，請務必提前告知。</p>
+              </div>
+            </div>
+
+            <!-- 範例6 -->
+            <div class="example-card">
+              <div class="example-card-header">❌ 範例 6：只有 1 次打卡</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row bad"><span class="punch-dot bad"></span>06:00</li>
+                </ul>
+                <div class="result-badge">計算時數：0h</div>
+                <p class="example-reason">僅有1筆記錄，無法形成任何配對，當日工時<strong>完全不計算</strong>。請確保每次上下工都完成簽到。</p>
+              </div>
+            </div>
+
+            <!-- 範例7 -->
+            <div class="example-card">
+              <div class="example-card-header">❌ 範例 7：不在簽到區間打卡</div>
+              <div class="example-card-body">
+                <ul class="punch-list">
+                  <li class="punch-row bad"><span class="punch-dot bad"></span>04:52 ← 區間外</li>
+                  <li class="punch-row"><span class="punch-dot"></span>11:38</li>
+                </ul>
+                <div class="result-badge">計算時數：3h38m</div>
+                <p class="example-reason">04:52 不在上午上工簽到區間（05:50–06:10）內，此筆<strong>不列入有效上工時間</strong>，導致工時大幅縮短。</p>
+              </div>
+            </div>
+
+          </div><!-- end examples-grid -->
+        </div><!-- end examples-section -->
+
+      </div>
+      <div class="notice-footer">請各位同仁務必遵守，確保自身權益。<span>謝謝大家的配合！</span></div>
+    </div>
+  </div>
+
+  <!-- ===== LAO ===== -->
+  <div class="lang-section" id="lang-lo">
+    <div class="notice-card">
+      <div class="notice-header">
+        <div class="leaf-deco">🌾</div>
+        <div class="notice-tag">📢 ປະກາດ</div>
+        <h1 class="notice-title" style="font-family:'Noto Sans Lao',sans-serif;">ລະບຽບການລົງທະບຽນເຂົ້າ-ອອກວຽກ</h1>
+        <div class="notice-meta">
+          <span>📅 ວັນທີປະກາດ</span><span class="dot">●</span><span>31 ມີນາ 2026</span>
+        </div>
+      </div>
+      <div class="notice-body" style="font-family:'Noto Sans Lao',sans-serif;">
+        <p class="greeting">ສະບາຍດີເພື່ອນຮ່ວມງານທຸກທ່ານ:<br>ເພື່ອຄຸ້ມຄອງສິດທິ​ຂອງ​ທ່ານ ​ແລະ ຮັບ​ປະກັນ​ຄວາມ​ຖືກ​ຕ້ອງ​ໃນ​ການ​ຄິດ​ໄລ່​ເງິນ​ເດືອນ, ກະ​ລຸ​ນາ​ປະຕິ​ບັດ​ຕາມ​ລະ​ບຽບ​ການ​ລົງ​ທະ​ບຽນ​ດັ່ງ​ນີ້.</p>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">1</span>ຊ່ວງເວລາລົງທະບຽນປະຈໍາວັນ</div>
+          <p style="font-size:14px;color:#555;margin-bottom:12px;">ການເຮັດວຽກປະຈໍາວັນຕ້ອງ​ລົງ​ທະ​ບຽນ <strong>4 ຄັ້ງ</strong> (ເຊົ້າ 2 ຄັ້ງ, ບ່າຍ 2 ຄັ້ງ)</p>
+          <table class="schedule-table">
+            <thead><tr><th>ຊ່ວງ</th><th>ເວລາເຂົ້າວຽກ</th><th>ເວລາອອກວຽກ</th><th>ໂມງເຮັດວຽກ</th></tr></thead>
+            <tbody>
+              <tr><td>☀️ ເຊົ້າ</td><td><span class="time-badge">05:50 ~ 06:10</span></td><td><span class="time-badge">11:30 ~ 12:00</span></td><td>5 ຊົ່ວໂມງ</td></tr>
+              <tr><td>🌤 ບ່າຍ</td><td><span class="time-badge">12:50 ~ 13:10</span></td><td><span class="time-badge">ຫຼັງ 15:00</span></td><td>4 ຊົ່ວໂມງ</td></tr>
+              <tr><td>📊 ລວມ</td><td colspan="3"><strong>9 ຊົ່ວໂມງ</strong> ຕໍ່ວັນ</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">2</span>ຂໍ້ຄວນລະວັງກ່ຽວກັບການຄິດໄລ່ເງິນເດືອນ</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>ຄວາມຄົບຖ້ວນຂອງການບັນທຶກ:</strong> ຕ້ອງ​ມີ​ການ​ລົງ​ທະ​ບຽນ​ຄົບ 4 ຄັ້ງ​ຕໍ່​ວັນ. ຖ້າ​ບໍ່​ຄົບ, ຈະ​ນັບ​ສະ​ເພາະ​ຊ່ວງ​ທີ່​ຄົບ​ຄູ່.
+              <div class="example-box">📌 ຕົວຢ່າງ: ຖ້າ​ມີ​ພຽງ 3 ລາຍການ (06:01, 11:35, 17:25) ຂາດ​ການ​ລົງ​ທະ​ບຽນ​ເຂົ້າ​ວຽກ​ຕອນ​ບ່າຍ, ຈະ​ນັບ​ສະ​ເພາະ 5 ຊົ່ວ​ໂມງ​ຕອນ​ເຊົ້າ.</div>
+            </div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>ມາດຕະຖານການນັບຊົ່ວໂມງ:</strong> ຕ້ອງ​ຄົບ 9 ຊົ່ວ​ໂມງ​ຈຶ່ງ​ໄດ້​ຮັບ​ເງິນ​ເດືອນ​ເຕັມ. ຖ້າ​ຕໍ່​ກ​ວ່ານັ້ນ, ນັບ​ທຸກ <strong>30 ນາທີ</strong>.</div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>ການຂໍຢູ່ລ່ວງເວລາ:</strong> ຖ້າ​ຕ້ອງ​ເຮັດ​ວຽກ​ຫຼັງ​ເວລາ​ປົກກະ​ຕິ, ໃຫ້​ແຈ້ງ​ຫົວ​ໜ້າ​ກຸ່ມ​ທັນ​ທີ. ຖ້າ​ບໍ່​ແຈ້ງ, ຈະ​ບໍ່​ນັບ​ເປັນ​ຄ່າ​ລ່ວງ​ເວລາ.</div></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">3</span>ການລາ ແລະ ການຈັດສັນ</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div>ຖ້າ​ຕ້ອງ​ການ​ລາ​ພັກ, ກະ​ລຸ​ນາ<strong>ແຈ້ງ​ຫົວ​ໜ້າ​ກຸ່ມ​ລ່ວງ​ໜ້າ</strong> ເພື່ອ​ຄວາມ​ສະດວກ​ໃນ​ການ​ຈັດ​ຕາ​ຕະລາງ.</div></li>
+          </ul>
+        </div>
+        <div class="examples-section" style="font-family:'Noto Sans Lao',sans-serif;">
+          <div class="examples-title" style="color:var(--green-dark);"><span class="examples-title-icon" style="background:var(--green-mid);">✓</span>ຕົວຢ່າງການລົງທະບຽນທີ່ຖືກຕ້ອງ</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ ຖືກຕ້ອງ 1: ມາດຕະຖານ 9 ຊົ່ວໂມງ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:58 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:10 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:01 ✓</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">ຊົ່ວໂມງ: 9h01m ✓</div><p class="example-reason">ລົງທະບຽນຄົບ 4 ຄັ້ງ ໃນຊ່ວງເວລາທີ່ຖືກຕ້ອງ, <strong>ນັບ 9 ຊົ່ວໂມງ, ໄດ້ເງິນເດືອນເຕັມ</strong>.</p></div></div>
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ ຖືກຕ້ອງ 2: ເຮັດວຽກຊົດເຊີຍ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>06:15 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:21 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:21 ✓ ຢູ່ດົນຂຶ້ນ</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">ຊົ່ວໂມງ: 9h06m ✓</div><p class="example-reason">ເຂົ້າ​ວຽກ​ສາຍ​ໜ້ອຍ, ອອກ​ວຽກ​ຊ້າ​ເພື່ອ​ຊົດ​ເຊີຍ, <strong>ລວມ​ເກີນ 9 ຊົ່ວ​ໂມງ</strong>. ຕ້ອງ​ແຈ້ງ​ຫົວ​ໜ້າ.</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section" style="font-family:'Noto Sans Lao',sans-serif;">
+          <div class="examples-title" style="color:#92400e;"><span class="examples-title-icon" style="background:#d97706;">!</span>ຕົວຢ່າງທີ່ຕ້ອງລະວັງ</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#fcd34d;"><div class="example-card-header" style="background:#d97706;">⚠️ ລ່ວງເວລາໂດຍບໍ່ແຈ້ງ — ບໍ່ນັບ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:55 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:30 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:00 ✓</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:30 ⚠️ ບໍ່ໄດ້ແຈ້ງ</li></ul><div class="result-badge warn">ສະ​ແດງ: 11h30m → ນັບ​ຈິງ: 9h</div><p class="example-reason">ຢູ່​ຈົນ 19:30 ແຕ່<strong>ບໍ່​ໄດ້​ແຈ້ງ​ຫົວ​ໜ້າ​ກ່ອນ</strong>, ເວ​ລາ​ທີ່​ເກີນ<strong>ຈະ​ບໍ່​ນັບ</strong>. ຕ້ອງ​ແຈ້ງ​ລ່ວງ​ໜ້າ.</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section" style="font-family:'Noto Sans Lao',sans-serif;">
+          <div class="examples-title"><span class="examples-title-icon">✕</span>ຕົວຢ່າງການລົງທະບຽນທີ່ຜິດພາດ</div>
+          <div class="examples-grid">
+            <div class="example-card"><div class="example-card-header">❌ ຕົວຢ່າງ 1: ລົງທະບຽນ 2 ຄັ້ງ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot bad"></span>07:01</li><li class="punch-row"><span class="punch-dot bad"></span>20:13</li></ul><div class="result-badge">ຊົ່ວໂມງ: 0h</div><p class="example-reason">ມີພຽງ 2 ລາຍການ, ບໍ່ສາມາດຈັບຄູ່ໄດ້, <strong>ບໍ່ນັບຊົ່ວໂມງ</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ຕົວຢ່າງ 2: ລົງທະບຽນ 3 ຄັ້ງ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:01</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row bad"><span class="punch-dot bad"></span>16:55 ← ຂາດເຂົ້າວຽກ</li></ul><div class="result-badge">ຊົ່ວໂມງ: 8h54m</div><p class="example-reason">ຂາດການລົງທະບຽນເຂົ້າວຽກຕອນບ່າຍ, ນັບສະເພາະ 5 ຊົ່ວໂມງເຊົ້າ.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ຕົວຢ່າງ 3: ລົງທະບຽນ 5 ຄັ້ງ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:06</li><li class="punch-row bad"><span class="punch-dot bad"></span>06:07 ← ຊ້ຳ</li><li class="punch-row"><span class="punch-dot"></span>11:31</li><li class="punch-row"><span class="punch-dot"></span>13:08</li><li class="punch-row"><span class="punch-dot"></span>17:00</li></ul><div class="result-badge">ຊົ່ວໂມງ: 8h54m</div><p class="example-reason">ມີ 5 ລາຍການ, ລົງທະບຽນຊ້ຳ ເຮັດໃຫ້ຄິດໄລ່ຜິດພາດ.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ຕົວຢ່າງ 4: ລົງທະບຽນຊ້ຳ+ຂາດ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>05:51</li><li class="punch-row bad"><span class="punch-dot bad"></span>12:52 ← ຂາດອອກວຽກເຊົ້າ</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:01</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:02 ← ຊ້ຳ</li></ul><div class="result-badge">ຊົ່ວໂມງ: 9h02m</div><p class="example-reason">ລົງທະບຽນຊ້ຳໃນເວລາໃກ້ຄຽງ ແລະ ຂາດການອອກວຽກ, ຜົນການຄິດໄລ່ບໍ່ຖືກຕ້ອງ.</p></div></div>
+            <div class="example-card"><div class="example-card-header">⚠️ ຕົວຢ່າງ 5: ເວລາຜິດປົກກະຕິ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row warn"><span class="punch-dot warn"></span>05:58</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row"><span class="punch-dot"></span>13:21</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:01 ← ຜິດປົກກະຕິ</li></ul><div class="result-badge warn">ຊົ່ວໂມງ: 11h01m</div><p class="example-reason">19:01 ເກີນເວລາ, ຖ້າ​ບໍ່​ແຈ້ງ​ຫົວ​ໜ້າ <strong>ຈະ​ບໍ່​ໄດ້​ຮັບ​ຄ່າ​ລ່ວງ​ເວລາ</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ຕົວຢ່າງ 6: ລົງທະບຽນ 1 ຄັ້ງ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>06:00</li></ul><div class="result-badge">ຊົ່ວໂມງ: 0h</div><p class="example-reason">ມີພຽງ 1 ລາຍການ, <strong>ບໍ່ນັບຊົ່ວໂມງ</strong>ທັງໝົດ.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ຕົວຢ່າງ 7: ນອກຊ່ວງເວລາ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>04:52 ← ນອກຊ່ວງ</li><li class="punch-row"><span class="punch-dot"></span>11:38</li></ul><div class="result-badge">ຊົ່ວໂມງ: 3h38m</div><p class="example-reason">04:52 ບໍ່ຢູ່ໃນຊ່ວງ 05:50–06:10, <strong>ບໍ່ນັບ</strong>ເປັນເວລາເຂົ້າວຽກ.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="notice-footer">ກະ​ລຸ​ນາ​ທຸກ​ທ່ານ​ປະຕິ​ບັດ​ຕາມ​ລະ​ບຽບ. <span>ຂອບ​ໃຈ​ທຸກ​ທ່ານ!</span></div>
+    </div>
+  </div>
+
+  <!-- ===== INDONESIAN ===== -->
+  <div class="lang-section" id="lang-id">
+    <div class="notice-card">
+      <div class="notice-header">
+        <div class="leaf-deco">🌾</div>
+        <div class="notice-tag">📢 PENGUMUMAN</div>
+        <h1 class="notice-title">Sistem & Peraturan Absensi Masuk-Keluar Kerja</h1>
+        <div class="notice-meta"><span>📅 Tanggal Terbit</span><span class="dot">●</span><span>31 Maret 2026</span></div>
+      </div>
+      <div class="notice-body">
+        <p class="greeting">Kepada seluruh rekan kerja yang terhormat,<br>Demi menjamin hak-hak pribadi dan ketepatan perhitungan gaji, harap mematuhi dan melaksanakan sistem absensi berikut ini.</p>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">1</span>Jadwal Absensi Harian</div>
+          <p style="font-size:14px;color:#555;margin-bottom:12px;">Setiap hari kerja wajib melakukan <strong>4 kali</strong> absensi (2 pagi, 2 sore)</p>
+          <table class="schedule-table">
+            <thead><tr><th>Sesi</th><th>Absen Masuk</th><th>Absen Keluar</th><th>Jam Kerja</th></tr></thead>
+            <tbody>
+              <tr><td>☀️ Pagi</td><td><span class="time-badge">05:50 ~ 06:10</span></td><td><span class="time-badge">11:30 ~ 12:00</span></td><td>5 Jam</td></tr>
+              <tr><td>🌤 Sore</td><td><span class="time-badge">12:50 ~ 13:10</span></td><td><span class="time-badge">Setelah 15:00</span></td><td>4 Jam</td></tr>
+              <tr><td>📊 Total</td><td colspan="3"><strong>9 Jam</strong> per hari</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">2</span>Pengingat Penting Perhitungan Gaji</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>Kelengkapan Catatan:</strong> Setiap hari harus memiliki 4 catatan absensi lengkap. Jika tidak lengkap, hanya sesi yang berpasangan yang akan dihitung.
+              <div class="example-box">📌 Contoh: Jika hanya ada 3 catatan (06:01, 11:35, 17:25), karena tidak ada absen masuk sore, hanya 5 jam pagi yang dihitung.</div>
+            </div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>Standar Perhitungan Jam:</strong> Total jam kerja harian harus mencapai 9 jam untuk gaji penuh. Jika kurang, dihitung per <strong>30 menit</strong>.</div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>Pengajuan Lembur:</strong> Jika bekerja melebihi jam normal, segera laporkan alasan lembur kepada ketua regu. Tanpa laporan, lembur tidak akan dihitung.</div></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">3</span>Cuti & Pengaturan Jadwal</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div>Jika membutuhkan cuti, harap <strong>beritahu ketua regu terlebih dahulu</strong> untuk memudahkan pengaturan jadwal.</div></li>
+          </ul>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title" style="color:var(--green-dark);"><span class="examples-title-icon" style="background:var(--green-mid);">✓</span>Contoh Absensi yang Benar</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ Benar 1: Standar 9 Jam</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:58 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:10 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:01 ✓</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">Jam: 9h01m ✓</div><p class="example-reason">4 absensi lengkap dalam jadwal yang benar, <strong>9 jam terpenuhi, gaji penuh</strong>.</p></div></div>
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ Benar 2: Kompensasi Waktu</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>06:15 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:21 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:21 ✓ pulang lebih lambat</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">Jam: 9h06m ✓</div><p class="example-reason">Masuk sedikit terlambat, pulang lebih lambat 15 menit untuk kompensasi. <strong>Total melebihi 9 jam, gaji penuh</strong>. Tetap lapor ketua regu.</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title" style="color:#92400e;"><span class="examples-title-icon" style="background:#d97706;">!</span>Contoh yang Perlu Diperhatikan</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#fcd34d;"><div class="example-card-header" style="background:#d97706;">⚠️ Lembur tanpa lapor — tidak dihitung</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:55 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:30 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:00 ✓</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:30 ⚠️ tanpa laporan</li></ul><div class="result-badge warn">Tampil: 11h30m → Dihitung: 9h</div><p class="example-reason">Pulang pukul 19:30 namun<strong> tidak melapor ke ketua regu sebelumnya</strong>. Jam melebihi normal<strong> tidak akan dihitung</strong>. Selalu lapor jika ingin lembur.</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title"><span class="examples-title-icon">✕</span>Contoh Absensi yang Salah</div>
+          <div class="examples-grid">
+            <div class="example-card"><div class="example-card-header">❌ Contoh 1: Hanya 2 absensi</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot bad"></span>07:01</li><li class="punch-row"><span class="punch-dot bad"></span>20:13</li></ul><div class="result-badge">Jam: 0h</div><p class="example-reason">Hanya 2 catatan, tidak ada pasangan sore, jam kerja <strong>tidak dihitung</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Contoh 2: Hanya 3 absensi</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:01</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row bad"><span class="punch-dot bad"></span>16:55 ← tidak ada masuk sore</li></ul><div class="result-badge">Jam: 8h54m</div><p class="example-reason">Absen masuk sore tidak ada, hanya 5 jam pagi yang dihitung.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Contoh 3: 5 absensi (lebih)</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:06</li><li class="punch-row bad"><span class="punch-dot bad"></span>06:07 ← duplikat</li><li class="punch-row"><span class="punch-dot"></span>11:31</li><li class="punch-row"><span class="punch-dot"></span>13:08</li><li class="punch-row"><span class="punch-dot"></span>17:00</li></ul><div class="result-badge">Jam: 8h54m</div><p class="example-reason">5 catatan menyebabkan pasangan kacau, jam dihitung salah.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Contoh 4: Absen duplikat</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>05:51</li><li class="punch-row bad"><span class="punch-dot bad"></span>12:52 ← tidak ada keluar pagi</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:01</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:02 ← duplikat</li></ul><div class="result-badge">Jam: 9h02m</div><p class="example-reason">Absen duplikat dan tidak lengkap menyebabkan perhitungan tidak akurat.</p></div></div>
+            <div class="example-card"><div class="example-card-header">⚠️ Contoh 5: Waktu tidak wajar</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row warn"><span class="punch-dot warn"></span>05:58</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row"><span class="punch-dot"></span>13:21</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:01 ← tidak wajar</li></ul><div class="result-badge warn">Jam: 11h01m</div><p class="example-reason">19:01 melebihi jam normal. Tanpa laporan ke ketua regu, <strong>lembur tidak dihitung</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Contoh 6: Hanya 1 absensi</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>06:00</li></ul><div class="result-badge">Jam: 0h</div><p class="example-reason">Hanya 1 catatan, <strong>jam kerja tidak dihitung sama sekali</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Contoh 7: Di luar jadwal</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>04:52 ← di luar jadwal</li><li class="punch-row"><span class="punch-dot"></span>11:38</li></ul><div class="result-badge">Jam: 3h38m</div><p class="example-reason">04:52 di luar jadwal 05:50–06:10, <strong>tidak dihitung</strong> sebagai absen masuk.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="notice-footer">Harap semua rekan kerja mematuhi peraturan ini demi kepentingan bersama. <span>Terima kasih atas kerjasamanya!</span></div>
+    </div>
+  </div>
+
+  <!-- ===== THAI ===== -->
+  <div class="lang-section" id="lang-th">
+    <div class="notice-card">
+      <div class="notice-header">
+        <div class="leaf-deco">🌾</div>
+        <div class="notice-tag">📢 ประกาศ</div>
+        <h1 class="notice-title" style="font-family:'Noto Sans TC',sans-serif;">ระบบและกฎระเบียบการลงชื่อเข้า-ออกงาน</h1>
+        <div class="notice-meta"><span>📅 วันที่ประกาศ</span><span class="dot">●</span><span>31 มีนาคม 2026</span></div>
+      </div>
+      <div class="notice-body">
+        <p class="greeting">เรียนเพื่อนร่วมงานทุกท่าน,<br>เพื่อปกป้องสิทธิ์ส่วนบุคคลและความถูกต้องในการคำนวณเงินเดือน กรุณาปฏิบัติตามระบบการลงชื่อดังนี้</p>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">1</span>ช่วงเวลาลงชื่อประจำวัน</div>
+          <p style="font-size:14px;color:#555;margin-bottom:12px;">การทำงานประจำวันต้องลงชื่อ <strong>4 ครั้ง</strong> (เช้า 2 ครั้ง, บ่าย 2 ครั้ง)</p>
+          <table class="schedule-table">
+            <thead><tr><th>ช่วง</th><th>เวลาเข้างาน</th><th>เวลาออกงาน</th><th>ชั่วโมงทำงาน</th></tr></thead>
+            <tbody>
+              <tr><td>☀️ เช้า</td><td><span class="time-badge">05:50 ~ 06:10</span></td><td><span class="time-badge">11:30 ~ 12:00</span></td><td>5 ชั่วโมง</td></tr>
+              <tr><td>🌤 บ่าย</td><td><span class="time-badge">12:50 ~ 13:10</span></td><td><span class="time-badge">หลัง 15:00</span></td><td>4 ชั่วโมง</td></tr>
+              <tr><td>📊 รวม</td><td colspan="3"><strong>9 ชั่วโมง</strong> ต่อวัน</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">2</span>ข้อควรระวังเรื่องการคำนวณเงินเดือน</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>ความครบถ้วนของบันทึก:</strong> ต้องมีบันทึกลงชื่อครบ 4 ครั้งต่อวัน หากไม่ครบจะนับเฉพาะช่วงที่ครบคู่เท่านั้น
+              <div class="example-box">📌 ตัวอย่าง: หากมีเพียง 3 รายการ (06:01, 11:35, 17:25) ขาดการลงชื่อเข้างานช่วงบ่าย จะนับเฉพาะ 5 ชั่วโมงตอนเช้า</div>
+            </div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>มาตรฐานการนับชั่วโมง:</strong> ต้องทำงานครบ 9 ชั่วโมงจึงจะได้รับเงินเดือนเต็ม หากน้อยกว่านั้นจะคำนวณทุก <strong>30 นาที</strong></div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>การขอทำงานล่วงเวลา:</strong> หากต้องทำงานเกินเวลาปกติ ให้แจ้งหัวหน้ากลุ่มทันที หากไม่แจ้งจะไม่นับเป็นค่าล่วงเวลา</div></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">3</span>การลาและการจัดตารางงาน</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div>หากต้องการลาพัก กรุณา<strong>แจ้งหัวหน้ากลุ่มล่วงหน้า</strong> เพื่อความสะดวกในการจัดตารางงาน</div></li>
+          </ul>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title" style="color:var(--green-dark);"><span class="examples-title-icon" style="background:var(--green-mid);">✓</span>ตัวอย่างการลงชื่อที่ถูกต้อง</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ ถูกต้อง 1: มาตรฐาน 9 ชั่วโมง</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:58 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:10 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:01 ✓</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">ชั่วโมง: 9h01m ✓</div><p class="example-reason">ลงชื่อครบ 4 ครั้งในช่วงเวลาที่กำหนด <strong>ครบ 9 ชั่วโมง ได้รับเงินเดือนเต็ม</strong>.</p></div></div>
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ ถูกต้อง 2: ชดเชยเวลา</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>06:15 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:21 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:21 ✓ ออกงานช้าลง</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">ชั่วโมง: 9h06m ✓</div><p class="example-reason">เข้างานช้าเล็กน้อย ออกงานช้า 15 นาทีเพื่อชดเชย <strong>รวมเกิน 9 ชั่วโมง ได้เงินเดือนเต็ม</strong>. ต้องแจ้งหัวหน้าด้วย.</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title" style="color:#92400e;"><span class="examples-title-icon" style="background:#d97706;">!</span>ตัวอย่างที่ต้องระวัง</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#fcd34d;"><div class="example-card-header" style="background:#d97706;">⚠️ ทำงานล่วงเวลาโดยไม่แจ้ง — ไม่นับ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:55 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:30 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:00 ✓</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:30 ⚠️ ไม่แจ้งหัวหน้า</li></ul><div class="result-badge warn">แสดง: 11h30m → คำนวณ: 9h</div><p class="example-reason">ออกงาน 19:30 แต่<strong>ไม่แจ้งหัวหน้ากลุ่มล่วงหน้า</strong> ชั่วโมงที่เกินปกติ<strong>จะไม่ถูกนับ</strong> กรุณาแจ้งทุกครั้งที่ต้องการทำงานล่วงเวลา</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title"><span class="examples-title-icon">✕</span>ตัวอย่างการลงชื่อที่ผิดพลาด</div>
+          <div class="examples-grid">
+            <div class="example-card"><div class="example-card-header">❌ ตัวอย่าง 1: ลงชื่อ 2 ครั้ง</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot bad"></span>07:01</li><li class="punch-row"><span class="punch-dot bad"></span>20:13</li></ul><div class="result-badge">ชั่วโมง: 0h</div><p class="example-reason">มีเพียง 2 รายการ ไม่สามารถจับคู่ได้ <strong>ไม่นับชั่วโมงทำงาน</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ตัวอย่าง 2: ลงชื่อ 3 ครั้ง</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:01</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row bad"><span class="punch-dot bad"></span>16:55 ← ขาดเข้างานบ่าย</li></ul><div class="result-badge">ชั่วโมง: 8h54m</div><p class="example-reason">ขาดการลงชื่อเข้างานช่วงบ่าย นับเฉพาะ 5 ชั่วโมงตอนเช้า.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ตัวอย่าง 3: ลงชื่อ 5 ครั้ง</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:06</li><li class="punch-row bad"><span class="punch-dot bad"></span>06:07 ← ซ้ำ</li><li class="punch-row"><span class="punch-dot"></span>11:31</li><li class="punch-row"><span class="punch-dot"></span>13:08</li><li class="punch-row"><span class="punch-dot"></span>17:00</li></ul><div class="result-badge">ชั่วโมง: 8h54m</div><p class="example-reason">5 รายการทำให้การจับคู่ผิดพลาด คำนวณชั่วโมงไม่ถูกต้อง.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ตัวอย่าง 4: ลงชื่อซ้ำ+ขาด</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>05:51</li><li class="punch-row bad"><span class="punch-dot bad"></span>12:52 ← ขาดออกงานเช้า</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:01</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:02 ← ซ้ำ</li></ul><div class="result-badge">ชั่วโมง: 9h02m</div><p class="example-reason">ลงชื่อซ้ำและขาดรายการทำให้คำนวณผิดพลาด.</p></div></div>
+            <div class="example-card"><div class="example-card-header">⚠️ ตัวอย่าง 5: เวลาผิดปกติ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row warn"><span class="punch-dot warn"></span>05:58</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row"><span class="punch-dot"></span>13:21</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:01 ← ผิดปกติ</li></ul><div class="result-badge warn">ชั่วโมง: 11h01m</div><p class="example-reason">19:01 เกินเวลาปกติ ถ้าไม่แจ้งหัวหน้า <strong>ค่าล่วงเวลาจะไม่ถูกนับ</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ตัวอย่าง 6: ลงชื่อ 1 ครั้ง</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>06:00</li></ul><div class="result-badge">ชั่วโมง: 0h</div><p class="example-reason">มีเพียง 1 รายการ <strong>ไม่นับชั่วโมงทำงานทั้งหมด</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ ตัวอย่าง 7: นอกช่วงเวลา</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>04:52 ← นอกช่วง</li><li class="punch-row"><span class="punch-dot"></span>11:38</li></ul><div class="result-badge">ชั่วโมง: 3h38m</div><p class="example-reason">04:52 ไม่อยู่ในช่วง 05:50–06:10 <strong>ไม่นับ</strong>เป็นเวลาเข้างาน.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="notice-footer">กรุณาปฏิบัติตามกฎระเบียบเพื่อผลประโยชน์ของตนเอง <span>ขอบคุณทุกท่านที่ให้ความร่วมมือ!</span></div>
+    </div>
+  </div>
+
+  <!-- ===== BENGALI ===== -->
+  <div class="lang-section" id="lang-bn">
+    <div class="notice-card">
+      <div class="notice-header">
+        <div class="leaf-deco">🌾</div>
+        <div class="notice-tag">📢 বিজ্ঞপ্তি</div>
+        <h1 class="notice-title" style="font-family:'Noto Sans Bengali',sans-serif;font-size:22px;">কর্মক্ষেত্রে প্রবেশ ও প্রস্থান নিবন্ধন পদ্ধতি ও বিধিমালা</h1>
+        <div class="notice-meta"><span>📅 প্রকাশের তারিখ</span><span class="dot">●</span><span>৩১ মার্চ ২০২৬</span></div>
+      </div>
+      <div class="notice-body" style="font-family:'Noto Sans Bengali',sans-serif;">
+        <p class="greeting">প্রিয় সকল সহকর্মী,<br>ব্যক্তিগত অধিকার সুরক্ষা এবং বেতন গণনার নির্ভুলতা নিশ্চিত করতে অনুগ্রহ করে নিম্নলিখিত নিবন্ধন পদ্ধতি মেনে চলুন।</p>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">১</span>দৈনিক নিবন্ধনের সময়সূচি</div>
+          <p style="font-size:14px;color:#555;margin-bottom:12px;">প্রতিদিনের কাজে <strong>৪ বার</strong> নিবন্ধন করতে হবে (সকালে ২ বার, বিকেলে ২ বার)</p>
+          <table class="schedule-table">
+            <thead><tr><th>সেশন</th><th>কাজ শুরুর সময়</th><th>কাজ শেষের সময়</th><th>কর্মঘণ্টা</th></tr></thead>
+            <tbody>
+              <tr><td>☀️ সকাল</td><td><span class="time-badge">05:50 ~ 06:10</span></td><td><span class="time-badge">11:30 ~ 12:00</span></td><td>৫ ঘণ্টা</td></tr>
+              <tr><td>🌤 বিকেল</td><td><span class="time-badge">12:50 ~ 13:10</span></td><td><span class="time-badge">১৫:০০-এর পরে</span></td><td>৪ ঘণ্টা</td></tr>
+              <tr><td>📊 মোট</td><td colspan="3">প্রতিদিন <strong>৯ ঘণ্টা</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">২</span>বেতন গণনার গুরুত্বপূর্ণ নির্দেশনা</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>রেকর্ডের সম্পূর্ণতা:</strong> প্রতিদিন ৪টি সম্পূর্ণ নিবন্ধন থাকতে হবে। অসম্পূর্ণ হলে শুধুমাত্র জোড়া সেশনের সময় গণনা করা হবে।
+              <div class="example-box">📌 উদাহরণ: যদি শুধু ৩টি রেকর্ড থাকে (06:01, 11:35, 17:25), বিকেলে প্রবেশ নিবন্ধন না থাকায় শুধু ৫ ঘণ্টা সকালের সময় গণনা হবে।</div>
+            </div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>ঘণ্টা গণনার মানদণ্ড:</strong> পূর্ণ বেতনের জন্য প্রতিদিন মোট ৯ ঘণ্টা কাজ করতে হবে। কম হলে প্রতি <strong>৩০ মিনিট</strong> হিসেবে গণনা করা হবে।</div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>ওভারটাইমের আবেদন:</strong> স্বাভাবিক সময়ের পরে কাজ করলে, গ্রুপ লিডারকে অবিলম্বে কারণ জানান। না জানালে ওভারটাইম বেতন দেওয়া হবে না।</div></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">৩</span>ছুটি ও কর্মসূচি ব্যবস্থাপনা</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div>ছুটির প্রয়োজন হলে <strong>আগে থেকেই গ্রুপ লিডারকে জানান</strong> যাতে কাজের সময়সূচি সুবিধামতো তৈরি করা যায়।</div></li>
+          </ul>
+        </div>
+        <div class="examples-section" style="font-family:'Noto Sans Bengali',sans-serif;">
+          <div class="examples-title" style="color:var(--green-dark);"><span class="examples-title-icon" style="background:var(--green-mid);">✓</span>সঠিক নিবন্ধনের উদাহরণ</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ সঠিক ১: মানক ৯ ঘণ্টা</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:58 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:10 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:01 ✓</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">ঘণ্টা: 9h01m ✓</div><p class="example-reason">৪টি নিবন্ধন নির্ধারিত সময়ে, <strong>৯ ঘণ্টা পূর্ণ, পূর্ণ বেতন পাবেন</strong>।</p></div></div>
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ সঠিক ২: সময় পূরণ</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>06:15 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:21 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:21 ✓ দেরিতে শেষ</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">ঘণ্টা: 9h06m ✓</div><p class="example-reason">সামান্য দেরিতে প্রবেশ, ১৫ মিনিট দেরিতে শেষ করে সময় পূরণ। <strong>মোট ৯ ঘণ্টার বেশি, পূর্ণ বেতন</strong>। গ্রুপ লিডারকে জানাতে হবে।</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section" style="font-family:'Noto Sans Bengali',sans-serif;">
+          <div class="examples-title" style="color:#92400e;"><span class="examples-title-icon" style="background:#d97706;">!</span>সতর্কতামূলক উদাহরণ</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#fcd34d;"><div class="example-card-header" style="background:#d97706;">⚠️ অননুমোদিত ওভারটাইম — গণনা হবে না</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:55 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:30 ✓</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:00 ✓</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:30 ⚠️ না জানিয়ে</li></ul><div class="result-badge warn">দেখানো: 11h30m → গণনা: 9h</div><p class="example-reason">19:30 পর্যন্ত কাজ করেছেন কিন্তু<strong> গ্রুপ লিডারকে আগে জানাননি</strong>। অতিরিক্ত সময়<strong> গণনায় ধরা হবে না</strong>। ওভারটাইমের আগে সবসময় জানান।</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section" style="font-family:'Noto Sans Bengali',sans-serif;">
+          <div class="examples-title"><span class="examples-title-icon">✕</span>ভুল নিবন্ধনের উদাহরণ</div>
+          <div class="examples-grid">
+            <div class="example-card"><div class="example-card-header">❌ উদাহরণ ১: মাত্র ২ বার</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot bad"></span>07:01</li><li class="punch-row"><span class="punch-dot bad"></span>20:13</li></ul><div class="result-badge">ঘণ্টা: 0h</div><p class="example-reason">মাত্র ২টি রেকর্ড, কোনো জোড়া নেই, <strong>ঘণ্টা গণনা হবে না</strong>।</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ উদাহরণ ২: মাত্র ৩ বার</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:01</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row bad"><span class="punch-dot bad"></span>16:55 ← বিকেলে প্রবেশ নেই</li></ul><div class="result-badge">ঘণ্টা: 8h54m</div><p class="example-reason">বিকেলে প্রবেশ নিবন্ধন নেই, শুধু ৫ ঘণ্টা সকালের সময় গণনা।</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ উদাহরণ ৩: ৫ বার (বেশি)</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:06</li><li class="punch-row bad"><span class="punch-dot bad"></span>06:07 ← পুনরাবৃত্তি</li><li class="punch-row"><span class="punch-dot"></span>11:31</li><li class="punch-row"><span class="punch-dot"></span>13:08</li><li class="punch-row"><span class="punch-dot"></span>17:00</li></ul><div class="result-badge">ঘণ্টা: 8h54m</div><p class="example-reason">৫টি রেকর্ড জোড়া মেলাতে সমস্যা করে, ঘণ্টা ভুল হয়।</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ উদাহরণ ৪: পুনরাবৃত্তি+অনুপস্থিত</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>05:51</li><li class="punch-row bad"><span class="punch-dot bad"></span>12:52 ← সকালে প্রস্থান নেই</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:01</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:02 ← পুনরাবৃত্তি</li></ul><div class="result-badge">ঘণ্টা: 9h02m</div><p class="example-reason">পুনরাবৃত্তি ও অসম্পূর্ণ রেকর্ডে হিসাব ভুল হয়।</p></div></div>
+            <div class="example-card"><div class="example-card-header">⚠️ উদাহরণ ৫: অস্বাভাবিক সময়</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row warn"><span class="punch-dot warn"></span>05:58</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row"><span class="punch-dot"></span>13:21</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:01 ← অস্বাভাবিক</li></ul><div class="result-badge warn">ঘণ্টা: 11h01m</div><p class="example-reason">19:01 স্বাভাবিক সময়ের বাইরে। না জানালে <strong>ওভারটাইম বেতন নেই</strong>।</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ উদাহরণ ৬: মাত্র ১ বার</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>06:00</li></ul><div class="result-badge">ঘণ্টা: 0h</div><p class="example-reason">মাত্র ১টি রেকর্ড, <strong>কোনো ঘণ্টাই গণনা হবে না</strong>।</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ উদাহরণ ৭: সময়সীমার বাইরে</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>04:52 ← সীমার বাইরে</li><li class="punch-row"><span class="punch-dot"></span>11:38</li></ul><div class="result-badge">ঘণ্টা: 3h38m</div><p class="example-reason">04:52 নির্ধারিত সময় 05:50–06:10-এর বাইরে, <strong>গণনায় ধরা হবে না</strong>।</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="notice-footer">সকল সহকর্মীদের বিধি মেনে চলার অনুরোধ করা হচ্ছে। <span>সহযোগিতার জন্য ধন্যবাদ!</span></div>
+    </div>
+  </div>
+
+  <!-- ===== ENGLISH ===== -->
+  <div class="lang-section" id="lang-en">
+    <div class="notice-card">
+      <div class="notice-header">
+        <div class="leaf-deco">🌾</div>
+        <div class="notice-tag">📢 NOTICE</div>
+        <h1 class="notice-title">Work Check-In/Check-Out System & Regulations</h1>
+        <div class="notice-meta"><span>📅 Date of Issue</span><span class="dot">●</span><span>March 31, 2026</span></div>
+      </div>
+      <div class="notice-body">
+        <p class="greeting">Dear All Colleagues,<br>To safeguard your personal rights and ensure accurate payroll calculations, please strictly comply with the following check-in system.</p>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">1</span>Daily Check-In Schedule</div>
+          <p style="font-size:14px;color:#555;margin-bottom:12px;">Each working day requires <strong>4 check-ins</strong> (2 in the morning, 2 in the afternoon)</p>
+          <table class="schedule-table">
+            <thead><tr><th>Session</th><th>Clock-In Time</th><th>Clock-Out Time</th><th>Working Hours</th></tr></thead>
+            <tbody>
+              <tr><td>☀️ Morning</td><td><span class="time-badge">05:50 ~ 06:10</span></td><td><span class="time-badge">11:30 ~ 12:00</span></td><td>5 Hours</td></tr>
+              <tr><td>🌤 Afternoon</td><td><span class="time-badge">12:50 ~ 13:10</span></td><td><span class="time-badge">After 15:00</span></td><td>4 Hours</td></tr>
+              <tr><td>📊 Total</td><td colspan="3"><strong>9 Hours</strong> per day</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">2</span>Important Payroll Reminders</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>Record Completeness:</strong> All 4 daily check-in records must be complete. Incomplete records will only count paired sessions.
+              <div class="example-box">📌 Example: If only 3 records exist (06:01, 11:35, 17:25) — missing the afternoon clock-in — only the 5-hour morning session will be counted.</div>
+            </div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>Hours Calculation Standard:</strong> A full 9 hours must be logged for full-day pay. If less than 9 hours, hours are counted in <strong>30-minute increments</strong>.</div></li>
+            <li class="rule-item"><div class="rule-icon">★</div><div><strong>Overtime Request:</strong> If work extends beyond normal hours, you must immediately notify your team leader with the reason. Without notification or records, overtime pay will not be granted.</div></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">3</span>Leave & Scheduling</div>
+          <ul class="rule-list">
+            <li class="rule-item"><div class="rule-icon">★</div><div>If you need time off, please <strong>notify your team leader in advance</strong> to allow for proper scheduling and workforce arrangement.</div></li>
+          </ul>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title" style="color:var(--green-dark);"><span class="examples-title-icon" style="background:var(--green-mid);">✓</span>Examples of Correct Check-In Records</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ Correct 1: Standard 9 Hours</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:58 ✓ AM clock-in</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓ AM clock-out</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:10 ✓ PM clock-in</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:01 ✓ PM clock-out</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">Hours: 9h01m ✓</div><p class="example-reason">All 4 check-ins fall within valid time windows. Both sessions paired correctly. <strong>9 hours met — full day's pay.</strong></p></div></div>
+            <div class="example-card" style="border-color:#bbf7d0;"><div class="example-card-header" style="background:var(--green-mid);">✅ Correct 2: Self-Compensated Hours</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>06:15 ✓ AM clock-in</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:45 ✓ AM clock-out</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:21 ✓ PM clock-in</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>17:21 ✓ stayed 15 min extra</li></ul><div class="result-badge" style="background:#f0fdf4;border-color:#86efac;color:#166534;">Hours: 9h06m ✓</div><p class="example-reason">PM clock-in was slightly late, so the worker stayed 15 extra minutes to compensate. <strong>Total exceeds 9 hours — full day's pay.</strong> Still notify your team leader.</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title" style="color:#92400e;"><span class="examples-title-icon" style="background:#d97706;">!</span>Important Warning Example</div>
+          <div class="examples-grid">
+            <div class="example-card" style="border-color:#fcd34d;"><div class="example-card-header" style="background:#d97706;">⚠️ Unreported overtime — extra hours not counted</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>05:55 ✓ AM clock-in</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>11:30 ✓ AM clock-out</li><li class="punch-row" style="color:var(--green-mid);"><span class="punch-dot" style="background:var(--green-mid);"></span>13:00 ✓ PM clock-in</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:30 ⚠️ no prior notice</li></ul><div class="result-badge warn">Displayed: 11h30m → Counted: 9h</div><p class="example-reason">Clocked out at 19:30 but<strong> did not notify the team leader beforehand</strong>. Any hours beyond the normal end time<strong> will not be included in pay calculation</strong>. Always report overtime to your team leader before staying late.</p></div></div>
+          </div>
+        </div>
+        <div class="examples-section">
+          <div class="examples-title"><span class="examples-title-icon">✕</span>Examples of Incorrect Check-In Records</div>
+          <div class="examples-grid">
+            <div class="example-card"><div class="example-card-header">❌ Example 1: Only 2 check-ins</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot bad"></span>07:01</li><li class="punch-row"><span class="punch-dot bad"></span>20:13</li></ul><div class="result-badge">Hours: 0h</div><p class="example-reason">Only 2 records — no afternoon pair formed. Work hours <strong>not counted</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Example 2: Only 3 check-ins</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:01</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row bad"><span class="punch-dot bad"></span>16:55 ← missing PM clock-in</li></ul><div class="result-badge">Hours: 8h54m</div><p class="example-reason">No afternoon clock-in, so 16:55 cannot be paired. Only the 5-hour morning session is counted.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Example 3: 5 check-ins (extra)</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>06:06</li><li class="punch-row bad"><span class="punch-dot bad"></span>06:07 ← duplicate</li><li class="punch-row"><span class="punch-dot"></span>11:31</li><li class="punch-row"><span class="punch-dot"></span>13:08</li><li class="punch-row"><span class="punch-dot"></span>17:00</li></ul><div class="result-badge">Hours: 8h54m</div><p class="example-reason">5 records break the pairing logic — hours calculated incorrectly.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Example 4: Duplicate + missing</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row"><span class="punch-dot"></span>05:51</li><li class="punch-row bad"><span class="punch-dot bad"></span>12:52 ← missing AM clock-out</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:01</li><li class="punch-row warn"><span class="punch-dot warn"></span>17:02 ← duplicate</li></ul><div class="result-badge">Hours: 9h02m</div><p class="example-reason">Duplicate punch and missing record cause inaccurate hour calculation.</p></div></div>
+            <div class="example-card"><div class="example-card-header">⚠️ Example 5: Abnormal time</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row warn"><span class="punch-dot warn"></span>05:58</li><li class="punch-row"><span class="punch-dot"></span>13:10</li><li class="punch-row"><span class="punch-dot"></span>13:21</li><li class="punch-row warn"><span class="punch-dot warn"></span>19:01 ← abnormal</li></ul><div class="result-badge warn">Hours: 11h01m</div><p class="example-reason">19:01 exceeds normal hours. Without notifying your team leader, <strong>overtime will not be paid</strong>.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Example 6: Only 1 check-in</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>06:00</li></ul><div class="result-badge">Hours: 0h</div><p class="example-reason">Only 1 record — <strong>zero hours counted</strong> for the entire day.</p></div></div>
+            <div class="example-card"><div class="example-card-header">❌ Example 7: Outside valid window</div><div class="example-card-body"><ul class="punch-list"><li class="punch-row bad"><span class="punch-dot bad"></span>04:52 ← outside window</li><li class="punch-row"><span class="punch-dot"></span>11:38</li></ul><div class="result-badge">Hours: 3h38m</div><p class="example-reason">04:52 is outside the 05:50–06:10 window — <strong>not counted</strong> as a valid clock-in, hours drastically reduced.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="notice-footer">All colleagues are required to comply to protect their own rights and interests. <span>Thank you for your cooperation!</span></div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  © 2026 XIN FU FRESH IMPORT-EXPORT · 欣富生鮮進出口 · All Rights Reserved
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
