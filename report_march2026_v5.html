@@ -148,8 +148,15 @@ body {
 }
 
 /* ─── TABLE ─── */
-.t-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.t-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; position: relative; }
 .t-wrap::after { content: ''; }
+.scroll-hint {
+  display: none;
+  align-items: center; gap: 6px;
+  font-size: 11px; color: #aaa;
+  margin-bottom: 6px; padding: 4px 0;
+}
+.scroll-hint::before { content: '↔'; font-size: 14px; color: #FF8A00; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
 thead th {
   background: #FFE8C8; padding: 12px 16px; text-align: left;
@@ -356,7 +363,7 @@ footer {
   footer { padding: 16px 16px; font-size: 11px; }
 
   /* Scroll hint for wide tables */
-  .scroll-hint { display: block !important; }
+  .scroll-hint { display: flex !important; }
 
   /* Sparkline row colspan fix */
   #it-tbody tr td[colspan] { min-width: unset; white-space: normal; }
@@ -458,6 +465,7 @@ footer {
 
   <div class="card">
     <div class="card-hd"><div><div class="ttl">品項彙總</div><div class="sub">依出貨金額排序</div></div><div class="chip">23 種品項</div></div>
+    <div class="scroll-hint">← 左右滑動查看完整資料</div>
     <div class="t-wrap">
     <table>
       <thead><tr>
@@ -477,7 +485,7 @@ footer {
 <div class="page">
   <div class="card">
     <div class="card-hd"><div><div class="ttl">品項詳細分析</div><div class="sub">出貨次數 · 價格區間 · 波動狀態</div></div></div>
-    <div style="font-size:11px;color:#aaa;margin-bottom:6px;display:none" class="scroll-hint">← 左右滑動查看完整資料</div>
+    <div class="scroll-hint">← 左右滑動查看完整資料</div>
     <div class="t-wrap">
     <table>
       <thead><tr>
@@ -532,6 +540,7 @@ footer {
 
   <div class="card mb18">
     <div class="card-hd"><div><div class="ttl">單價波動風險</div><div class="sub">主力品項 · 3月價格區間</div></div></div>
+    <div class="scroll-hint">← 左右滑動查看完整資料</div>
     <div class="t-wrap">
     <table>
       <thead><tr><th>品項</th><th>最低價</th><th>最高價</th><th>價差</th><th>波動率</th><th>風險</th><th>建議策略</th></tr></thead>
@@ -542,6 +551,7 @@ footer {
 
   <div class="card mb18">
     <div class="card-hd"><div><div class="ttl">採購效率分析</div><div class="sub">效率比 &gt; 1.0 = 輕量高值品項</div></div></div>
+    <div class="scroll-hint">← 左右滑動查看完整資料</div>
     <div class="t-wrap">
     <table>
       <thead><tr><th>#</th><th>品項</th><th>重量佔比</th><th>金額佔比</th><th>效率比</th><th>均價</th><th>判斷</th></tr></thead>
@@ -567,6 +577,7 @@ footer {
   </div>
   <div class="card">
     <div class="card-hd"><div><div class="ttl">每日出貨明細</div><div class="sub">金額 · 重量 · 均價</div></div></div>
+    <div class="scroll-hint">← 左右滑動查看完整資料</div>
     <div class="t-wrap">
     <table>
       <thead><tr><th>日期</th><th>出貨金額 (LAK)</th><th>TWD 約值</th><th>重量 (KG)</th><th>均價 (LAK/KG)</th></tr></thead>
@@ -585,6 +596,7 @@ footer {
     <div class="s-row">
       <input id="s-q" placeholder="🔍 輸入關鍵字篩選品項…" oninput="filterDetail()">
     </div>
+    <div class="scroll-hint">← 左右滑動查看完整資料</div>
     <div class="t-wrap">
     <table>
       <thead><tr><th>日期</th><th>品項描述</th><th>數量 (KG)</th><th>單價 (LAK)</th><th>金額 (LAK)</th></tr></thead>
@@ -741,7 +753,7 @@ function sparkline(pts, W, H, color) {
   const priceLabel = '<text x="'+(xS(pts.length-1)+5)+'" y="'+(yS(last)+4)+'" font-size="9" fill="'+color+'" font-weight="700">'+last.toLocaleString()+'</text>';
   const gId = 'sg'+Math.random().toString(36).slice(2,7);
   return '<div style="position:relative">'
-    +'<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:'+H+'px;display:block">'
+    +'<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block">'
     +'<defs><linearGradient id="'+gId+'" x1="0" y1="0" x2="0" y2="1">'
     +'<stop offset="0%" stop-color="'+color+'" stop-opacity="0.2"/>'
     +'<stop offset="100%" stop-color="'+color+'" stop-opacity="0"/>'
@@ -770,12 +782,12 @@ function bItems(){
       sparkColor = last > first ? '#e05500' : last < first ? '#2c7a3c' : '#888';
     }
     const sparkRow = pts && pts.length >= 2
-      ? '<tr><td colspan="10" style="padding:0 16px 14px 16px;background:#FFFAE8;border-bottom:2px solid #f0e8da">'
+      ? '<tr><td colspan="10" style="padding:0 12px 12px 12px;background:#FFFAE8;border-bottom:2px solid #f0e8da;overflow:hidden">'
         +'<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;padding-top:8px">'
         +'<span style="font-size:11px;font-weight:700;color:#8a7a6a;letter-spacing:0.5px">📈 3月單價走勢 (LAK/KG)</span>'
         +'<span style="font-size:11px;color:#aaa">共 '+pts.length+' 筆記錄</span>'
         +'</div>'
-        +sparkline(pts, 600, 72, sparkColor)
+        +sparkline(pts, 560, 68, sparkColor)
         +'</td></tr>'
       : '';
     return '<tr style="border-bottom:'+(pts&&pts.length>=2?'none':'1px solid #f0e8da')+'"><td><span class="rk '+(i<3?['r1','r2','r3'][i]:'rn')+'">'+(i+1)+'</span></td>'
