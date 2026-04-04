@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XIN FU FRESH · 出貨報告 2026年3月</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 15px; }
@@ -563,7 +563,7 @@ const DR=[["01/03/2026", "LONG EGGPLANT ເຂື ອມ່ ວງຍາວ", 10
 
 // SVG helpers — clean green palette
 function svgLine(el,lb,da,col){
-  const W=Math.max(el.offsetWidth||700,400),H=el.offsetHeight||230;
+  const W=Math.max(el.offsetWidth||el.getBoundingClientRect().width||700,400),H=el.offsetHeight||el.getBoundingClientRect().height||230;
   const p={t:12,r:14,b:40,l:80};
   const cW=W-p.l-p.r,cH=H-p.t-p.b;
   const mx=Math.max(...da)*1.15;
@@ -611,7 +611,7 @@ function svgPie(el,lb,da,cls){
     leg+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><div style="width:11px;height:11px;border-radius:3px;background:'+cls[i]+';flex-shrink:0"></div><span style="font-size:13px;color:#4a3a2a;flex:1">'+lb[i]+'</span><span style="font-size:13px;font-weight:700;color:#363636">'+pct+'%</span></div>';
     ang+=sw;
   });
-  el.style.display='flex';el.style.alignItems='center';el.style.gap='20px';
+  el.style.display='flex';el.style.alignItems='center';el.style.gap='20px';el.style.flexWrap='wrap';
   el.innerHTML='<svg viewBox="0 0 '+W+' 212" style="width:'+W+'px;min-width:'+W+'px;height:212px">'+sl+'</svg><div style="flex:1">'+leg+'</div>';
 }
 
@@ -736,49 +736,6 @@ function bItems(){
   }).join('');
 }
 
-function bInsight(){
-  svgBar(document.getElementById('rhythmChart'),DAILY.map(d=>d.d),DAILY.map(d=>d.a),DAILY.map(d=>d.q));
-  svgScatter(document.getElementById('matrixChart'),ITEMS.filter(i=>i.qty>100&&!i.n.startsWith('VISA')&&!i.n.startsWith('SEED')));
-  document.getElementById('mat-leg').innerHTML=[
-    ['⭐ 明星品項','高金額＋高重量','#363636'],
-    ['💎 高價值','高單價少重量','#f59e0b'],
-    ['📦 走量品項','大量低單價','#0ea5e9'],
-    ['❓ 待評估','低金額低重量','#9ab89a']
-  ].map(([t,d,c])=>'<div style="background:#f8fcf8;border:1px solid #e2ece2;border-radius:8px;padding:10px"><div style="font-size:13px;font-weight:600;color:'+c+';margin-bottom:2px">'+t+'</div><div style="font-size:12px;color:#6b8f6b">'+d+'</div></div>').join('');
-
-  const main=ITEMS.filter(i=>i.qty>200&&!i.n.startsWith('VISA')&&!i.n.startsWith('SEED'));
-  document.getElementById('risk-tbody').innerHTML=main.map(it=>{
-    const df=it.mx-it.mn,vol=it.mn>0?Math.round(df/it.mn*100):0;
-    const [rl,rc,st]=vol>=80?['極高','#e05500','鎖定長期合約，固定出貨價']:vol>=40?['高','#cc8800','分批出貨，避免單次大量']:vol>=20?['中','#4a7ab8','監控行情，設定上限價']:['低','#2c7a3c','維持現狀，適量備貨'];
-    return '<tr><td class="tb">'+it.n.split(' ')[0]+'</td><td class="tgr">'+f(it.mn)+'</td><td class="tr2">'+f(it.mx)+'</td><td>'+f(df)+'</td>'
-      +'<td><strong>'+vol+'%</strong></td><td style="color:'+rc+';font-weight:700">'+rl+'</td>'
-      +'<td style="font-size:13px;color:#4a6a4a">'+st+'</td></tr>';
-  }).join('');
-
-  const veE=ITEMS.filter(i=>i.qty>50&&!i.n.startsWith('VISA')&&!i.n.startsWith('SEED'));
-  const tQ=veE.reduce((s,i)=>s+i.qty,0),tA=veE.reduce((s,i)=>s+i.amt,0);
-  document.getElementById('eff-tbody').innerHTML=veE.map((it,i)=>{
-    const qp=(it.qty/tQ*100).toFixed(1),ap=(it.amt/tA*100).toFixed(1);
-    const ratio=(parseFloat(ap)/parseFloat(qp)).toFixed(2);
-    const [j,c]=ratio>=1.5?['💎 高效 — 優先出貨','#2c7a3c']:ratio>=0.8?['✅ 平衡','#4a7ab8']:['⚠ 低效 — 檢討用量','#e05500'];
-    return '<tr><td><span class="rk '+(i<3?['r1','r2','r3'][i]:'rn')+'">'+(i+1)+'</span></td>'
-      +'<td class="tb">'+it.n.split(' ').slice(0,2).join(' ')+'</td><td>'+qp+'%</td><td>'+ap+'%</td>'
-      +'<td><strong style="font-size:17px">'+ratio+'</strong></td>'
-      +'<td>'+f(Math.round(it.avg))+'</td><td style="font-size:13px;color:'+c+';font-weight:700">'+j+'</td></tr>';
-  }).join('');
-
-  const acts=[
-    ['ir','#FF8A00','🔴 立即行動','開發備用供應商','TAIWAN VEGE 佔 97.3%，建議立即接洽 2～3 家替代供應商，3 個月內將集中度降至 70% 以下。'],
-    ['io','#cc8800','🟠 本月執行','GREEN LONG PEPPER 拉高佔比','均價 20,000 LAK/KG，目前佔比僅 0.6%。若市場允許，拉高至 3～5% 可顯著提升毛利。'],
-    ['io','#cc8800','🟡 下月計劃','ITALY SALAD 鎖定長期合約','最大出貨品（佔 20.4%），單價波動 63%。建議談固定價合約，穩定成本結構。'],
-    ['io','#cc8800','🟡 下月計劃','建立月中庫存預警機制','03/20 後出貨量急增 +124%，建議設定庫存下限警報，避免急單溢價。'],
-    ['ig','#2c7a3c','🟢 季度優化','MASTARD CHINESE 走量優化','重量佔 9.5% 但金額僅 7.3%（效率比 0.77），評估是否減量或以高值品替代。'],
-    ['ig','#2c7a3c','🟢 季度優化','TOMATO 系列整合談判','M/L/S/XL 合計佔 19.6% 但分散 4 規格，整合為 2 規格可提升議價籌碼。']
-  ];
-  document.getElementById('actions').innerHTML=acts.map(([cl,c,p,t,b])=>
-    '<div class="ins-item '+cl+'"><div class="ins-pri" style="color:'+c+'">'+p+'</div><div class="ins-ttl">'+t+'</div><div class="ins-txt">'+b+'</div></div>').join('');
-}
-
 function bDaily(){
   svgLine(document.getElementById('lineChart'),DAILY.map(d=>d.d),DAILY.map(d=>d.a),'#FF8A00');
   svgBar(document.getElementById('barChart'),DAILY.map(d=>d.d),DAILY.map(d=>d.a),DAILY.map(d=>d.q));
@@ -786,13 +743,6 @@ function bDaily(){
     const ap=d.q>1?Math.round(d.a/d.q):'—';
     return '<tr><td>2026/'+d.d+'</td><td class="tg">'+f(d.a)+'</td><td class="tm">'+fT(d.a)+'</td><td>'+f(d.q)+'</td><td>'+f(ap)+'</td></tr>';
   }).join('')+'<tr class="tf"><td>合計</td><td>'+f(TOTAL)+'</td><td>'+fT(TOTAL)+'</td><td>22,409</td><td>—</td></tr>';
-}
-
-function bInvoices(){
-  document.getElementById('inv-tbody').innerHTML=INVOICES.map(inv=>{
-    const bd=inv.sup==='TAIWAN VEGE'?'<span class="badge" style="background:#e8f0e8;color:#363636">TAIWAN VEGE</span>':'<span class="badge" style="background:#fdf0e0;color:#6a3a0a">TAIWAN AGRI 17</span>';
-    return '<tr><td class="tb">'+inv.no+'</td><td>'+inv.date+'</td><td>'+bd+'</td><td class="tg">'+f(inv.amt)+'</td><td class="tm">'+fT(inv.amt)+'</td></tr>';
-  }).join('')+'<tr class="tf"><td colspan="3">TOTAL · 28 張</td><td>'+f(TOTAL)+'</td><td>'+fT(TOTAL)+'</td></tr>';
 }
 
 // sort DR by date once
@@ -816,10 +766,18 @@ function showTab(id,btn){
   document.getElementById(id).classList.add('active');
   if(btn)btn.classList.add('active');
   if(id==='detail') rDetail();
-  if(id==='invoices') 
 }
-function init(){bTop8();bPie();bOvTable();bItems();bDaily();bFilters();rDetail();}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+function init(){
+  try { bTop8(); } catch(e) { console.error('bTop8',e); }
+  try { bPie(); } catch(e) { console.error('bPie',e); }
+  try { bOvTable(); } catch(e) { console.error('bOvTable',e); }
+  try { bItems(); } catch(e) { console.error('bItems',e); }
+  try { bDaily(); } catch(e) { console.error('bDaily',e); }
+  try { bFilters(); } catch(e) { console.error('bFilters',e); }
+  try { rDetail(); } catch(e) { console.error('rDetail',e); }
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+else setTimeout(init, 0);
 </script>
 </body>
 </html>
