@@ -492,7 +492,7 @@ footer {
     <div class="scroll-hint">← 左右滑動查看完整資料</div>
     <div class="t-wrap">
     <table>
-      <thead><tr>
+      <thead style="display:none"><tr>
         <th>#</th><th>品項名稱</th><th>次數</th><th>總重 (KG)</th>
         <th>總金額 (LAK)</th><th>均價</th><th>最低價</th><th>最高價</th>
         <th>波動率</th><th>狀態</th>
@@ -726,7 +726,20 @@ function bItems(){
         +sparkline(pts, 560, 68, sparkColor)
         +'</td></tr>'
       : '';
-    return '<tr style="border-bottom:'+(pts&&pts.length>=2?'none':'1px solid #f0e8da')+'"><td><span class="rk '+(i<3?['r1','r2','r3'][i]:'rn')+'">'+(i+1)+'</span></td>'
+    const headerRow = '<tr style="background:#FFF0D8;border-top:2px solid #e0c898">'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">#</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">品項名稱</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">次數</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">總重 (KG)</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">總金額 (LAK)</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">均價</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">最低價</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">最高價</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">波動率</td>'
+      +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">狀態</td>'
+      +'</tr>';
+    return headerRow
+      +'<tr style="border-bottom:'+(pts&&pts.length>=2?'none':'1px solid #f0e8da')+'"><td><span class="rk '+(i<3?['r1','r2','r3'][i]:'rn')+'">'+(i+1)+'</span></td>'
       +'<td class="tb">'+it.n+'</td><td>'+it.cnt+'</td><td>'+f(it.qty)+'</td>'
       +'<td class="tg">'+f(it.amt)+'</td><td>'+f(it.avg)+'</td>'
       +'<td class="tgr">'+f(it.mn)+'</td><td class="tr2">'+f(it.mx)+'</td>'
