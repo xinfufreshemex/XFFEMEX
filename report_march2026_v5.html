@@ -414,9 +414,7 @@ footer {
   <div class="nav-inner">
     <button class="active" onclick="showTab('overview',this)">🌾 總覽</button>
     <button onclick="showTab('items',this)">🥬 品項分析</button>
-    <button onclick="showTab('insight',this)">📊 銷售洞察</button>
     <button onclick="showTab('daily',this)">📅 每日趨勢</button>
-    <button onclick="showTab('invoices',this)">🧾 發票明細</button>
     <button onclick="showTab('detail',this)">📋 出貨明細</button>
   </div>
 </nav>
@@ -506,74 +504,6 @@ footer {
 </div>
 </div>
 
-<!-- ═══ INSIGHT ═══ -->
-<div id="insight" class="section">
-<div class="page">
-
-  <div class="card mb18">
-    <div class="card-hd"><div><div class="ttl">供應商集中度風險</div><div class="sub">依賴分析 · 斷貨風險評估</div></div><span class="badge br">⚠ 高風險</span></div>
-    <div class="risk-bar">
-      <div class="risk-seg" style="width:97.3%;background:#363636;color:#fff">🏭 TAIWAN VEGE — 97.3%</div>
-      <div class="risk-seg" style="width:2.7%;background:#FF8A00;color:#fff;font-size:11px;justify-content:center">2.7%</div>
-    </div>
-    <div class="sup-grid">
-      <div class="sup-card" style="background:#fde8e8;border-color:#f5a5a5">
-        <div style="font-size:12px;font-weight:700;color:#991b1b;margin-bottom:6px">TAIWAN VEGE</div>
-        <div style="font-size:26px;font-weight:700;color:#e05500">222,684,000</div>
-        <div style="font-size:12px;color:#991b1b;margin-top:3px">LAK · 25 張發票</div>
-      </div>
-      <div class="sup-card" style="background:#fef3e2;border-color:#fcd492">
-        <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px">TAIWAN AGRI 17</div>
-        <div style="font-size:26px;font-weight:700;color:#bb7f00">6,250,000</div>
-        <div style="font-size:12px;color:#92400e;margin-top:3px">LAK · 3 張發票</div>
-      </div>
-    </div>
-    <div class="alert al-r" style="margin-top:0">🔴 <strong>高風險警示：</strong>TAIWAN VEGE 佔總出貨 97.3%，斷貨將導致農場出貨全停。建議 3 個月內發展 2～3 家備用供應商，目標將集中度降至 <strong>70%</strong> 以下。</div>
-  </div>
-
-  <div class="row2">
-    <div class="card">
-      <div class="card-hd"><div><div class="ttl">出貨節奏分析</div><div class="sub">每日出貨強度</div></div></div>
-      <div class="chart-box" style="height:200px" id="rhythmChart"></div>
-      <div class="alert al-b" style="margin-top:14px">💡 <strong>規律：</strong>月中後段（03/20 起）出貨量急增 <strong>+124%</strong>，建議提前 3 天確認庫存水位。</div>
-    </div>
-    <div class="card">
-      <div class="card-hd"><div><div class="ttl">品項貢獻矩陣</div><div class="sub">重量佔比 vs 金額佔比</div></div></div>
-      <div class="chart-box" style="height:200px" id="matrixChart"></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px" id="mat-leg"></div>
-    </div>
-  </div>
-
-  <div class="card mb18">
-    <div class="card-hd"><div><div class="ttl">單價波動風險</div><div class="sub">主力品項 · 3月價格區間</div></div></div>
-    <div class="scroll-hint">← 左右滑動查看完整資料</div>
-    <div class="t-wrap">
-    <table>
-      <thead><tr><th>品項</th><th>最低價</th><th>最高價</th><th>價差</th><th>波動率</th><th>風險</th><th>建議策略</th></tr></thead>
-      <tbody id="risk-tbody"></tbody>
-    </table>
-    </div>
-  </div>
-
-  <div class="card mb18">
-    <div class="card-hd"><div><div class="ttl">採購效率分析</div><div class="sub">效率比 &gt; 1.0 = 輕量高值品項</div></div></div>
-    <div class="scroll-hint">← 左右滑動查看完整資料</div>
-    <div class="t-wrap">
-    <table>
-      <thead><tr><th>#</th><th>品項</th><th>重量佔比</th><th>金額佔比</th><th>效率比</th><th>均價</th><th>判斷</th></tr></thead>
-      <tbody id="eff-tbody"></tbody>
-    </table>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-hd"><div><div class="ttl">即時行動建議</div><div class="sub">依優先順序排列</div></div></div>
-    <div class="ins-grid" id="actions"></div>
-  </div>
-
-</div>
-</div>
-
 <!-- ═══ DAILY ═══ -->
 <div id="daily" class="section">
 <div class="page">
@@ -591,59 +521,6 @@ footer {
     </table>
     </div>
   </div>
-</div>
-</div>
-
-<!-- ═══ INVOICES ═══ -->
-<div id="invoices" class="section">
-<div class="page">
-
-  <div class="kpi-row" style="grid-template-columns:repeat(4,1fr)">
-    <div class="kpi-card">
-      <div class="kpi-ic" style="background:#fde8e8">🏭</div>
-      <div class="kpi-body">
-        <div class="kpi-lbl">TAIWAN VEGE</div>
-        <div class="kpi-num" style="font-size:18px;color:#c83a18">222,684,000</div>
-        <div class="kpi-sub">LAK · 25 張 · 97.3%</div>
-      </div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-ic" style="background:#fdf0e8">🌱</div>
-      <div class="kpi-body">
-        <div class="kpi-lbl">TAIWAN AGRI 17</div>
-        <div class="kpi-num" style="font-size:18px;color:#cc8800">6,250,000</div>
-        <div class="kpi-sub">LAK · 3 張 · 2.7%</div>
-      </div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-ic" style="background:#e8f5e8">🔝</div>
-      <div class="kpi-body">
-        <div class="kpi-lbl">最高單日發票</div>
-        <div class="kpi-num" style="font-size:18px;color:#2c6a2c">21,154,000</div>
-        <div class="kpi-sub">LAK · 2026/03/20</div>
-      </div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-ic" style="background:#e8f0fa">📊</div>
-      <div class="kpi-body">
-        <div class="kpi-lbl">平均發票金額</div>
-        <div class="kpi-num" style="font-size:18px">8,176,214</div>
-        <div class="kpi-sub">LAK / 張</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-hd"><div><div class="ttl">發票彙總明細</div><div class="sub">28 張發票 · 2026年3月</div></div><div class="chip">28 張</div></div>
-    <div class="scroll-hint">← 左右滑動查看完整資料</div>
-    <div class="t-wrap">
-    <table>
-      <thead><tr><th>發票號碼</th><th>日期</th><th>供應商</th><th>金額 (LAK)</th><th>TWD 約值</th></tr></thead>
-      <tbody id="inv-tbody"></tbody>
-    </table>
-    </div>
-  </div>
-
 </div>
 </div>
 
@@ -939,9 +816,9 @@ function showTab(id,btn){
   document.getElementById(id).classList.add('active');
   if(btn)btn.classList.add('active');
   if(id==='detail') rDetail();
-  if(id==='invoices') bInvoices();
+  if(id==='invoices') 
 }
-function init(){bTop8();bPie();bOvTable();bItems();bInsight();bDaily();bInvoices();bFilters();rDetail();}
+function init(){bTop8();bPie();bOvTable();bItems();bDaily();bFilters();rDetail();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 </script>
 </body>
