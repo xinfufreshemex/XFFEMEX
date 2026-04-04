@@ -726,7 +726,11 @@ function bItems(){
         +sparkline(pts, 560, 68, sparkColor)
         +'</td></tr>'
       : '';
-    const headerRow = '<tr style="background:#FFF0D8;border-top:2px solid #e0c898">'
+    // 品項間的空白分隔行（第一個不加）
+    const gapRow = i > 0
+      ? '<tr><td colspan="10" style="height:20px;background:#f2ede4;border:none;padding:0"></td></tr>'
+      : '';
+    const headerRow = '<tr style="background:#FFF0D8;border-top:3px solid #FF8A00;border-bottom:1px solid #e0c898">'
       +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">#</td>'
       +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">品項名稱</td>'
       +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">次數</td>'
@@ -738,7 +742,7 @@ function bItems(){
       +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">波動率</td>'
       +'<td style="font-size:10px;font-weight:700;color:#5a3a1a;padding:7px 14px;letter-spacing:0.3px">狀態</td>'
       +'</tr>';
-    return headerRow
+    return gapRow + headerRow
       +'<tr style="border-bottom:'+(pts&&pts.length>=2?'none':'1px solid #f0e8da')+'"><td><span class="rk '+(i<3?['r1','r2','r3'][i]:'rn')+'">'+(i+1)+'</span></td>'
       +'<td class="tb">'+it.n+'</td><td>'+it.cnt+'</td><td>'+f(it.qty)+'</td>'
       +'<td class="tg">'+f(it.amt)+'</td><td>'+f(it.avg)+'</td>'
