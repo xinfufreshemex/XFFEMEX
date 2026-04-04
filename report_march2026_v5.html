@@ -394,7 +394,7 @@ footer {
       <div class="h-kpi">
         <div class="hk-l">總出貨金額</div>
         <div class="hk-v">228,934,000 LAK</div>
-        <div class="hk-s">≈ TWD 728,010</div>
+        <div class="hk-s">≈ TWD 322,339</div>
       </div>
       <div class="h-kpi">
         <div class="hk-l">總出貨重量</div>
@@ -416,6 +416,7 @@ footer {
     <button onclick="showTab('items',this)">🥬 品項分析</button>
     <button onclick="showTab('insight',this)">📊 銷售洞察</button>
     <button onclick="showTab('daily',this)">📅 每日趨勢</button>
+    <button onclick="showTab('invoices',this)">🧾 發票明細</button>
     <button onclick="showTab('detail',this)">📋 出貨明細</button>
   </div>
 </nav>
@@ -430,7 +431,7 @@ footer {
       <div class="kpi-body">
         <div class="kpi-lbl">總出貨金額</div>
         <div class="kpi-num green">228,934,000</div>
-        <div class="kpi-sub">LAK ≈ TWD 728,010</div>
+        <div class="kpi-sub">LAK ≈ TWD 322,339</div>
       </div>
     </div>
     <div class="kpi-card">
@@ -512,22 +513,22 @@ footer {
   <div class="card mb18">
     <div class="card-hd"><div><div class="ttl">供應商集中度風險</div><div class="sub">依賴分析 · 斷貨風險評估</div></div><span class="badge br">⚠ 高風險</span></div>
     <div class="risk-bar">
-      <div class="risk-seg" style="width:95.1%;background:#363636;color:#fff">🏭 TAIWAN VEGE — 95.1%</div>
-      <div class="risk-seg" style="width:4.9%;background:#FF8A00;color:#fff;font-size:11px;justify-content:center">4.9%</div>
+      <div class="risk-seg" style="width:97.3%;background:#363636;color:#fff">🏭 TAIWAN VEGE — 97.3%</div>
+      <div class="risk-seg" style="width:2.7%;background:#FF8A00;color:#fff;font-size:11px;justify-content:center">2.7%</div>
     </div>
     <div class="sup-grid">
       <div class="sup-card" style="background:#fde8e8;border-color:#f5a5a5">
         <div style="font-size:12px;font-weight:700;color:#991b1b;margin-bottom:6px">TAIWAN VEGE</div>
-        <div style="font-size:26px;font-weight:700;color:#e05500">217,734,000</div>
+        <div style="font-size:26px;font-weight:700;color:#e05500">222,684,000</div>
         <div style="font-size:12px;color:#991b1b;margin-top:3px">LAK · 25 張發票</div>
       </div>
       <div class="sup-card" style="background:#fef3e2;border-color:#fcd492">
         <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:6px">TAIWAN AGRI 17</div>
-        <div style="font-size:26px;font-weight:700;color:#bb7f00">11,200,000</div>
+        <div style="font-size:26px;font-weight:700;color:#bb7f00">6,250,000</div>
         <div style="font-size:12px;color:#92400e;margin-top:3px">LAK · 3 張發票</div>
       </div>
     </div>
-    <div class="alert al-r" style="margin-top:0">🔴 <strong>高風險警示：</strong>TAIWAN VEGE 佔總出貨 95.1%，斷貨將導致農場出貨全停。建議 3 個月內發展 2～3 家備用供應商，目標將集中度降至 <strong>70%</strong> 以下。</div>
+    <div class="alert al-r" style="margin-top:0">🔴 <strong>高風險警示：</strong>TAIWAN VEGE 佔總出貨 97.3%，斷貨將導致農場出貨全停。建議 3 個月內發展 2～3 家備用供應商，目標將集中度降至 <strong>70%</strong> 以下。</div>
   </div>
 
   <div class="row2">
@@ -593,6 +594,59 @@ footer {
 </div>
 </div>
 
+<!-- ═══ INVOICES ═══ -->
+<div id="invoices" class="section">
+<div class="page">
+
+  <div class="kpi-row" style="grid-template-columns:repeat(4,1fr)">
+    <div class="kpi-card">
+      <div class="kpi-ic" style="background:#fde8e8">🏭</div>
+      <div class="kpi-body">
+        <div class="kpi-lbl">TAIWAN VEGE</div>
+        <div class="kpi-num" style="font-size:18px;color:#c83a18">222,684,000</div>
+        <div class="kpi-sub">LAK · 25 張 · 97.3%</div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-ic" style="background:#fdf0e8">🌱</div>
+      <div class="kpi-body">
+        <div class="kpi-lbl">TAIWAN AGRI 17</div>
+        <div class="kpi-num" style="font-size:18px;color:#cc8800">6,250,000</div>
+        <div class="kpi-sub">LAK · 3 張 · 2.7%</div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-ic" style="background:#e8f5e8">🔝</div>
+      <div class="kpi-body">
+        <div class="kpi-lbl">最高單日發票</div>
+        <div class="kpi-num" style="font-size:18px;color:#2c6a2c">21,154,000</div>
+        <div class="kpi-sub">LAK · 2026/03/20</div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-ic" style="background:#e8f0fa">📊</div>
+      <div class="kpi-body">
+        <div class="kpi-lbl">平均發票金額</div>
+        <div class="kpi-num" style="font-size:18px">8,176,214</div>
+        <div class="kpi-sub">LAK / 張</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><div><div class="ttl">發票彙總明細</div><div class="sub">28 張發票 · 2026年3月</div></div><div class="chip">28 張</div></div>
+    <div class="scroll-hint">← 左右滑動查看完整資料</div>
+    <div class="t-wrap">
+    <table>
+      <thead><tr><th>發票號碼</th><th>日期</th><th>供應商</th><th>金額 (LAK)</th><th>TWD 約值</th></tr></thead>
+      <tbody id="inv-tbody"></tbody>
+    </table>
+    </div>
+  </div>
+
+</div>
+</div>
+
 <!-- ═══ DETAIL ═══ -->
 <div id="detail" class="section">
 <div class="page">
@@ -616,7 +670,7 @@ footer {
 <footer>🌿 XIN FU FRESH · 蔬菜出貨分析報告 · 2026年3月 · Vientiane, Laos PDR</footer>
 
 <script>
-const TOTAL=228934000, LT=0.00318;
+const TOTAL=228934000, LT=0.001408;
 const f=n=>n?.toLocaleString('zh-TW')??' — ';
 const fT=n=>'TWD '+Math.round(n*LT).toLocaleString('zh-TW');
 
@@ -837,7 +891,7 @@ function bInsight(){
   }).join('');
 
   const acts=[
-    ['ir','#FF8A00','🔴 立即行動','開發備用供應商','TAIWAN VEGE 佔 95.1%，建議立即接洽 2～3 家替代供應商，3 個月內將集中度降至 70% 以下。'],
+    ['ir','#FF8A00','🔴 立即行動','開發備用供應商','TAIWAN VEGE 佔 97.3%，建議立即接洽 2～3 家替代供應商，3 個月內將集中度降至 70% 以下。'],
     ['io','#cc8800','🟠 本月執行','GREEN LONG PEPPER 拉高佔比','均價 20,000 LAK/KG，目前佔比僅 0.6%。若市場允許，拉高至 3～5% 可顯著提升毛利。'],
     ['io','#cc8800','🟡 下月計劃','ITALY SALAD 鎖定長期合約','最大出貨品（佔 20.4%），單價波動 63%。建議談固定價合約，穩定成本結構。'],
     ['io','#cc8800','🟡 下月計劃','建立月中庫存預警機制','03/20 後出貨量急增 +124%，建議設定庫存下限警報，避免急單溢價。'],
@@ -885,6 +939,7 @@ function showTab(id,btn){
   document.getElementById(id).classList.add('active');
   if(btn)btn.classList.add('active');
   if(id==='detail') rDetail();
+  if(id==='invoices') bInvoices();
 }
 function init(){bTop8();bPie();bOvTable();bItems();bInsight();bDaily();bInvoices();bFilters();rDetail();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
